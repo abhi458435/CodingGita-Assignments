@@ -1,0 +1,109 @@
+### 18.
+What values will the following variables refer to?
+
+```python
+name = "Abhishek"
+age = 18
+city = "Begusarai"
+```
+
+Write your answer in this form:
+
+```text
+name → Abhishek
+age → 18
+city → Begusarai
+```
+What is the final value of `age`?
+
+```python
+age = 18
+age = 19
+```
+Ans:-Final value of age is 19 beacuse python refers last value
+
+### 20.
+What is the final value of `name`?
+
+```python
+name = "Rahul"
+name = "Amit"
+name = "Riya"
+```
+Ans:-Riya
+### 21.
+Explain what happens in this program:
+
+```python
+student_name = "Rahul"
+student_age = 18
+
+student_age = 19
+```
+Ans:-When a variable is assigned a new value,its old value is replaced.
+### 22.
+What values will `a`, `b`, and `c` refer to?
+
+```python
+a, b, c = 10, 20, 30
+```
+  Ans:-These are variables.
+  ### 24.
+Create variables for the following information:
+
+- Your name: your_name='Abhishek kumar'
+- Your age: your_age=18
+- Your city: your_city="Begusarai"
+  ### 25.
+Create variables for:
+
+- Student name: student_name="Abhishek kumar"
+- Student roll number: student_roll_number=57
+- Student branch: student_branch="cse"
+
+
+
+
+
+  ### 27.
+Use multiple assignment to create the following variables in one statement:
+
+```text
+name → "Rahul"
+age → 18
+city → "Patna"
+  Ans:- name,age,city="Rahul",18,"Patna"
+
+  ### 28.
+Use one statement to assign the value `0` to three variables:
+
+```text
+x
+y
+z
+Ans:- x=y=z=0
+  ### 29.
+The following code contains invalid variable names:
+
+```python
+1student = "Rahul"
+student name = "Rahul"
+class = "B.Tech"
+Rewrite all three using valid and meaningful variable names.
+Ans:- student1="Rahul"
+       student_name="Rahul"
+       class="B.Tech"
+
+Create a small Python program that stores a student's name and age, reassigns the age to a new value, and then displays the current values. Use:
+- A useful comment
+- Meaningful variable names
+- `snake_case`
+- Reassignment
+
+  Ans:-
+  my_name="Abhishek kumar"
+  age=18
+  age=19
+  comment='Hello sir ,how are you i hope all is doing great'
+  
+  
