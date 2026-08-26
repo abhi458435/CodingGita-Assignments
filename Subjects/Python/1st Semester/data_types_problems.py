@@ -66,7 +66,7 @@ a = None
 b = "None"
 print(type(a),type(b))
 
-value= 12
+value= 13
 type(value)
 value = "Abhishek"
 type(value)
