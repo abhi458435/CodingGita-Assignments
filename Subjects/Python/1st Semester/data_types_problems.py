@@ -41,9 +41,9 @@ print(complex_number, type(complex_number))
 
 
 
-student_name = "ayush"
+student_name = "Abhishek"
 student_age = 18
-student_height = 5.10
+student_height = 5.7
 whether_the_person_is_a_student = True
 student_result = False
 print(student_name,student_age,student_height,whether_the_person_is_a_student,student_result)
@@ -68,7 +68,7 @@ print(type(a),type(b))
 
 value= 12
 type(value)
-value = "ayush"
+value = "Abhishek"
 type(value)
 
 print(type(value))
