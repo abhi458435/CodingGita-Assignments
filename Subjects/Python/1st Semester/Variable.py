@@ -1,4 +1,4 @@
-name ="AYUSH"
+name ="Abhishek"
 age =19
 city ="GANDHINAGAR"
 print=(name,age,city)
@@ -30,15 +30,15 @@ print(x,y,z)
 #answer - x , y,z have same values due to assign sign '='
 
 
-your_name="ayush"
+your_name="Abhishek"
 your_age =18
-your_city ="lucknow "
+your_city ="Begusarai"
 
 print(your_name,your_age,your_city)
 
 
-student_name ="ayush"
-student_roll_no = 202649
+student_name ="Abhishek"
+student_roll_no = 2026457
 student_branch ="B.Tech"
 print(student_name,student_roll_no,student_branch)
 
@@ -54,7 +54,7 @@ y=8
 z=9
 print(x,y,z)
 
-your_name="ayush"
+your_name="Abhishek"
 your_age=18
-your_city="lucknow"
+your_city="Begusarai"
 print(your_name,your_age,your_city)
