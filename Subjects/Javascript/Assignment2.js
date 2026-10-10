@@ -1,8 +1,3 @@
-// ==========================================
-// JavaScript Assignment 2 - Complete Solutions
-// ==========================================
-
-// --- Part-1 / Part-a ---
 
 // Question 1
 let name = "Abhishek";
