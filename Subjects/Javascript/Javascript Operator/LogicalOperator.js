@@ -119,3 +119,192 @@
 //10.
 // let x = "" || 0 || false || null || undefined || "OK";
 // console.log(x);
+
+
+//3.Logical NOT !
+//1.
+// let isBanned = false
+// let canLoGin=!isBanned
+// console.log("Can Login?",canLoGin)
+
+//2.
+// let isCompleted = false
+// let isStillPending=!isCompleted
+// console.log("Is Still Pending?",isStillPending)
+
+//3.
+//  let isOn = true
+//  let isOff=!isOn
+//  console.log("Is Off?",isOff)
+
+//4.
+// let isActive = false
+// let cannotAccessPremiumContent=!isActive
+// console.log("Cannot Access Premium Content?",cannotAccessPremiumContent)
+
+//5.
+// let isReadOnly = false
+// let canBeEdited=!isReadOnly
+// console.log("Can Be Edited?",canBeEdited)
+
+//6.
+// let a = 0;
+// let b = 1;
+// console.log(!a, !b);
+// //7.
+// let x = "Hello";
+// let y = "";
+// console.log(!x, !y);
+// //8.
+// let val = 5;
+// let result = !val;
+// console.log(result);
+//9.
+// let a = 10;
+// let b = 20;
+// let result = !(a && b);
+// console.log(result);
+
+//10.
+// let x = 0;
+// let y = 1;
+// let result = !(x || y);
+// console.log(result);
+
+//Part-G:typeof Operator
+//part-a
+//1.
+// let name="Rahul"
+// console.log(typeof(name))
+
+//2.
+// let age=25
+// console.log(typeof age)
+
+//3.
+// let isStudent = true
+// console.log(typeof isStudent)
+
+//4.
+// let city;
+// console.log(typeof city)
+
+//5.
+// console.log(typeof(null))
+
+//6.
+// console.log(typeof 42);
+// console.log(typeof "Hello");
+// console.log(typeof true);
+// console.log(typeof undefined);
+// //7.
+// console.log(typeof null);
+// console.log(typeof {});
+// console.log(typeof []);
+// //8.
+// console.log(typeof NaN);
+// console.log(typeof Infinity);
+// console.log(typeof function(){});
+// //9.
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean("0"));
+// console.log(Boolean([]));
+// console.log(Boolean({}));
+// console.log(Boolean(null));
+
+// // //10.
+// console.log(String(100));
+// console.log(String(true));
+// console.log(String(null));
+// console.log(String(undefined));
+// console.log(100 + "");
+
+// //11.
+// console.log("5" + 3 + 2);
+// console.log(5 + 3 + "2");
+// console.log("5" - 3 + 2);
+// console.log(5 - "3" + "2");
+
+// //12.
+// console.log(true + true);
+// console.log(true + false);
+// console.log(true + "false");
+// console.log(false + "true");
+
+// //13.
+// console.log(null + 5);
+// console.log(undefined + 5);
+// console.log(null + "5");
+// console.log(undefined + "5");
+
+// //14.
+// console.log([] + []);
+// console.log([] + {});
+// console.log({} + []);
+// console.log({} + {});
+
+//15.
+// let a = "10";
+// let b = 5;
+// let c = a + b;
+// let d = a - b;
+// let e = +a + b;
+// console.log(c, typeof c);
+// console.log(d, typeof d);
+// console.log(e, typeof e);
+
+// //16.
+// console.log(!!"Hello");
+// console.log(!!"");
+// console.log(!!0);
+// console.log(!!1);
+// console.log(!!null);
+// console.log(!!undefined);
+
+// //17.
+// console.log(Number(""));
+// console.log(Number(" "));
+// console.log(Number("0"));
+// console.log(Number("  25  "));
+// console.log(Number("25px"));
+
+// //18.
+// let val1 = "5";
+// let val2 = 2;
+// console.log(val1 + val2);
+// console.log(+val1 + val2);
+// console.log(val1 - val2);
+// console.log(val1 * val2);
+// console.log(val1 / val2);
+
+// //19.
+// let count = 5;
+// console.log(typeof count++);
+// console.log(count);
+// console.log(typeof ++count);
+// console.log(count);
+
+// //20.
+// let x = "10";
+// let y = ++x;
+// console.log(x, y, typeof x, typeof y);
+
+// //21.
+// let a = "5";
+// let b = a++;
+// console.log(a, b, typeof a, typeof b);
+
+// //22.
+// console.log(typeof (1 + "2"));
+// console.log(typeof (1 - "2"));
+// console.log(typeof (1 * "2"));
+// console.log(typeof (1 / "2"));
+
+// //23.
+// let val = null;
+// console.log(typeof val);
+// console.log(val + 1);
+// console.log(val - 1);
+// console.log(val * 1);
+// console.log(Boolean(val));
