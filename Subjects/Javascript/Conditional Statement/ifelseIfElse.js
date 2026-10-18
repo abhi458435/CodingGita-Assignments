@@ -58,3 +58,44 @@
 // }else{
 //     console.log("Short")
 // }
+
+//6.
+// let num=37
+// if(num%3==0){
+//     console.log(`${num} is Divisible by 3`)
+// }else{
+//      console.log(`${num} is not Divisible by 3`)
+// }
+
+//7.
+// let password="admin@123"
+// if(password=="Login Successful"){
+//     console.log("Login Successful")
+// }else{
+//     console.log("Incorrect Password")
+// }
+
+//8.
+// let year=2026
+// if(year%4==0){
+//     console.log("Leap Year")
+// }else{
+//     console.log("Not a Leap Year")
+// }
+
+//9.
+// let num1=57
+// let num2=121
+// if(num1>num2){
+//     console.log(`${num1} is Greater`)
+// }else{
+//     console.log(`${num2} is Greater`)
+// }
+
+//10.
+// num=7
+// if(num>=0){
+//     console.log("Positive")
+// }else{
+//     console.log("Negative")
+// }

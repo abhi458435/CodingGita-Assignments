@@ -26,10 +26,10 @@
 // }
 
 //4.
-// let atmPin=true;
+// let atmPin=421826;
 // let accountBalance=5000
 // let withdrawalBalance=2000
-// if(atmPin==true){
+// if(atmPin==421826){
 //     if(accountBalance>=withdrawalBalance){
 //         console.log("Withdrawal Successful")
 //     }
@@ -41,6 +41,65 @@
 //     if(year%100==0){
 //         if(year%400==0){
 // console.log("Leap Year")
+//         }
+//     }
+// }
+
+//6.
+
+
+
+
+
+
+
+
+//7.
+// let isCartTotal=1400
+// let isUserIsPremiumMember="yes"
+// if(isCartTotal>=1000){
+//     if(isUserIsPremiumMember=="yes"){
+//         finalAmount=isCartTotal-isCartTotal*0.2
+//     }else{
+//         finalAmount=isCartTotal-isCartTotal*0.1
+//     }
+// }
+// console.log("Final Amount:",finalAmount)
+
+//8.
+// let num=24
+// if(num>0){
+//     if(num%2==0){
+//         if(num%4==0){
+//             console.log("Positive Even and Divisible by 4")
+//         }else{
+//             console.log("Positive Even But Not Divisible by 4")
+//         }
+//     }else{
+//         console.log("Positive Odd")
+//     }
+// }
+
+//9.
+// let age=25
+// let haveGraduationDegree=true
+// let have2YearExperiance=true
+// if(age>20 && age<31){
+// if(haveGraduationDegree==true){
+//     if(have2YearExperiance==true){
+//         console.log("Eligible for Interview")
+//     }
+// }
+// }
+
+//10.
+// let isPresent=true
+// let internalMarks=45
+// let externalMarks=37
+// if(isPresent==true){
+//     if(internalMarks>=30){
+//         if(externalMarks>=35){
+//             console.log("Eligible for Final Exam")
 //         }
 //     }
 // }

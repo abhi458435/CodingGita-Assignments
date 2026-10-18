@@ -35,3 +35,25 @@
 // }
 
 //7.
+// let string=""
+// if (string==""){
+//     console.log("No input provided")
+// }
+
+//8.
+// year=100
+// if(year%100==0){
+//     console.log("Century Year")
+// }
+
+//9.
+// let num=28
+// if(num>0 && num%2==0){
+//     console.log("Positive Even Number")
+// }
+
+//10.
+// let marks=57
+// if(marks>=35 && marks<=100){
+//     console.log("Valid Marks")
+// }
