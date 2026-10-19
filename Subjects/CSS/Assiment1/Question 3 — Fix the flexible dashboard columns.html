@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .dashboard {
+  display: flex;
+  width: 70vw;
+  height: 80vh;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: stretch; /* children fill full height */
+  border: 3px solid red;
+}
+
+.sidebar {
+  flex: 1;              /* smaller portion */
+  background: #ddd;
+  border: 2px solid #999;
+}
+
+.main-content {
+  flex: 5;              /* largest portion */
+  background: #e8f0ff;
+  min-width: 0;         /* prevents overflow */
+}
+
+.activity-panel {
+  flex: 2;              /* medium portion */
+  background: #eee;
+}
+
+.dashboard > * {
+  padding: 15px;
+}
+
+      
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+  <aside class="sidebar">
+    <h3>Sidebar</h3>
+    <p>Dashboard</p>
+    <p>Analytics</p>
+    <p>Settings</p>
+  </aside>
+
+  <main class="main-content">
+    <h2>Dashboard Overview</h2>
+    <p>This is the main content area.</p>
+    <p>
+      Add more content here to test how the layout
+      responds when the available space changes.
+    </p>
+  </main>
+
+  <aside class="activity-panel">
+    <h3>Recent Activity</h3>
+    <p>New user registered</p>
+    <p>Order completed</p>
+  </aside>
+</div>
+    
+</body>
+</html>
