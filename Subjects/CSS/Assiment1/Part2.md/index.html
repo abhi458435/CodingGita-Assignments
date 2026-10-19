@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+  <style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 570px;
+    max-width: 100%;
+    padding: 25px 38px 32px;
+    background: #1c1c1c;
+    border-radius: 5px;
+}
+
+.display {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-size: clamp(60px, 12vw, 130px);
+    font-weight: 300;
+    overflow: hidden;
+    padding-right: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px 24px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    border: none;
+    border-radius: 50%;
+    background: #505052;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light {
+    background: #a6a6a8;
+    color: #111111;
+}
+
+.orange {
+    background: #ff9800;
+    color: white;
+}
+
+.zero {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    border-radius: 100px;
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+button:active {
+    filter: brightness(1.2);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .calculator {
+        width: 100%;
+        padding: 20px 16px 24px;
+    }
+
+    .display {
+        height: 140px;
+    }
+
+    .buttons {
+        gap: 12px;
+    }
+
+    button {
+        font-size: clamp(18px, 5vw, 26px);
+    }
+
+    .zero {
+        padding-left: 20px;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+    <div class="calculator">
+
+        <div class="display">7744</div>
+
+        <div class="buttons">
+            <button class="light">C</button>
+            <button class="light">+/-</button>
+            <button class="light">%</button>
+            <button class="orange">÷</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="orange">×</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="orange">-</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="orange">+</button>
+
+            <button class="zero">0</button>
+            <button>,</button>
+            <button class="orange">=</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
