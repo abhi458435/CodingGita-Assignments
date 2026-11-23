@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Clone</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  body {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  .sidebar {
+    width: 260px;
+    background-color: #000;
+    padding: 24px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .logo img {
+    width: 130px;
+    display: block;
+    margin: 0 12px 24px;
+  }
+
+  .side-nav a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 4px;
+  }
+
+  .side-nav a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  .side-nav a:hover {
+    color: #fff;
+  }
+
+  .side-nav a.active {
+    background-color: #282828;
+    color: #fff;
+  }
+
+  .side-actions {
+    margin-top: 24px;
+  }
+
+  .side-actions a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+  }
+
+  .side-actions a img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    border-radius: 2px;
+  }
+
+  .side-actions a:hover {
+    color: #fff;
+  }
+
+  .fav {
+    margin-top: 26px;
+    padding: 0 12px;
+  }
+
+  .fav h4 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #b3b3b3;
+    margin-bottom: 14px;
+  }
+
+  .fav a {
+    display: block;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 0;
+  }
+
+  .fav a:hover {
+    color: #fff;
+  }
+
+  .install {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 12px;
+  }
+
+  .install img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  .install:hover {
+    color: #fff;
+  }
+
+  /* ---------- MAIN ---------- */
+  main {
+    flex: 1;
+    background: linear-gradient(180deg, #3a3a3a 0%, #191919 320px, #121212 100%);
+    overflow-y: auto;
+    padding: 16px 32px 30px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topbar .nav-arrows {
+    height: 34px;
+    object-fit: contain;
+  }
+
+  .topbar .user-chip {
+    height: 34px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  main h1 {
+    font-size: 32px;
+    margin: 24px 0 20px;
+  }
+
+  /* Quick cards */
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px 24px;
+  }
+
+  .quick-card {
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .quick-card:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .quick-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .quick-card span {
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+  /* Shows */
+  .shows-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 42px 0 18px;
+  }
+
+  .shows-header h2 {
+    font-size: 24px;
+  }
+
+  .shows-header a {
+    color: #b3b3b3;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .shows-header a:hover {
+    text-decoration: underline;
+  }
+
+  .shows-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+
+  .show-card {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+  }
+
+  .show-card:hover {
+    background-color: #282828;
+  }
+
+  .show-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .show-card h3 {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 6px;
+  }
+
+  .show-card p {
+    font-size: 13px;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ---------- PLAYER ---------- */
+  .player {
+    background-color: #181818;
+    border-top: 1px solid #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px 4px;
+    gap: 20px;
+  }
+
+  .now-playing {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+  }
+
+  .now-playing img.thumb {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+  }
+
+  .now-playing h4 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .now-playing p {
+    font-size: 12px;
+    color: #b3b3b3;
+    margin-top: 3px;
+  }
+
+  .now-playing img.heart {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  .player-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .player-center img {
+    max-width: 560px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .player-right img {
+    max-width: 230px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .device-bar {
+    background-color: #1ed760;
+    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    padding: 5px 60px 5px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .quick-grid { grid-template-columns: repeat(2, 1fr); }
+    .shows-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 700px) {
+    .sidebar { display: none; }
+    .quick-grid { grid-template-columns: 1fr; }
+    .shows-grid { grid-template-columns: repeat(2, 1fr); }
+    .player-right { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/Spotify logo.png" alt="Spotify">
+    </div>
+
+    <nav class="side-nav">
+      <a href="#" class="active"><img src="assets/Home.png" alt=""> Home</a>
+      <a href="#"><img src="assets/Search.png" alt=""> Search</a>
+      <a href="#"><img src="assets/Your library.png" alt=""> Your Library</a>
+    </nav>
+
+    <div class="side-actions">
+      <a href="#"><img src="assets/Create.png" alt=""> Create Playlist</a>
+      <a href="#"><img src="assets/Liked.png" alt=""> Liked Songs</a>
+      <a href="#"><img src="assets/your episodes.png" alt=""> Your Episodes</a>
+    </div>
+
+    <div class="fav">
+      <h4>FAV</h4>
+      <a href="#">Daily Mix 1</a>
+      <a href="#">Discover Weekly</a>
+      <a href="#">Malayalam</a>
+      <a href="#">Dance / Electronix Mix</a>
+      <a href="#">EDM / Popular</a>
+    </div>
+
+    <a class="install" href="#"><img src="assets/grommet-icons_install-option.png" alt=""> Install App</a>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <div class="topbar">
+      <img class="nav-arrows" src="assets/top arrow navigation.png" alt="Navigation">
+      <img class="user-chip" src="assets/User.png" alt="Angel">
+    </div>
+
+    <h1>Good morning</h1>
+
+    <div class="quick-grid">
+      <div class="quick-card">
+        <img src="assets/Liked.png" alt="Liked Songs">
+        <span>Liked Songs</span>
+      </div>
+      <div class="quick-card">
+        <img src="assets/image1.png" alt="Neffex Playlist">
+        <span>Neffex Playlist</span>
+      </div>
+      <div class="quick-card">
+        <img src="assets/image2.png" alt="K/ DA">
+        <span>K/ DA</span>
+      </div>
+      <div class="quick-card">
+        <img src="assets/image3.png" alt="Liked Songs">
+        <span>Liked Songs</span>
+      </div>
+      <div class="quick-card">
+        <img src="assets/image4.png" alt="Dance / Electronic Mix">
+        <span>Dance / Electronic Mix</span>
+      </div>
+    </div>
+
+    <div class="shows-header">
+      <h2>Shows you might like</h2>
+      <a href="#">SEE ALL</a>
+    </div>
+
+    <div class="shows-grid">
+      <div class="show-card">
+        <img src="assets/image5.png" alt="Weekly Motivation">
+        <h3>Weekly Motivatio...</h3>
+        <p>Ben Joe Scott</p>
+      </div>
+      <div class="show-card">
+        <img src="assets/image6.png" alt="Meditation Self">
+        <h3>MEDITATION SELF</h3>
+        <p>Ibn Hussain Aleen</p>
+      </div>
+      <div class="show-card">
+        <img src="assets/image7.png" alt="Words beyond actions">
+        <h3>Words beyond act...</h3>
+        <p>Samuel Scott</p>
+      </div>
+      <div class="show-card">
+        <img src="assets/image8.png" alt="The Alexa Show">
+        <h3>The Alexa Show</h3>
+        <p>Adriana Tom</p>
+      </div>
+      <div class="show-card">
+        <img src="assets/image9.png" alt="The Stories of Man">
+        <h3>The Stories of Ma...</h3>
+        <p>Lexus</p>
+      </div>
+      <div class="show-card">
+        <img src="assets/image10.png" alt="Motivation Daily">
+        <h3>Motivation Daily b...</h3>
+        <p>Georgina Martha</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ================= PLAYER ================= -->
+<footer>
+  <div class="player">
+    <div class="now-playing">
+      <img class="thumb" src="assets/object1.png" alt="Dreaming On">
+      <div>
+        <h4>Dreaming On</h4>
+        <p>NEFFEX</p>
+      </div>
+      <img class="heart" src="assets/heart.png" alt="Like">
+    </div>
+
+    <div class="player-center">
+      <img src="assets/Music Player Options.png" alt="Player controls">
+    </div>
+
+    <div class="player-right">
+      <img src="assets/Right options.png" alt="Player options">
+    </div>
+  </div>
+  <div class="device-bar">&#128266; Listening on ASUS-ROG-G531GT</div>
+</footer>
+
+</body>
+</html>
